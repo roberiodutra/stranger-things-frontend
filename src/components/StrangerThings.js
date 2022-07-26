@@ -114,8 +114,8 @@ class StrangerThings extends React.Component {
   }
 
   development() {
-    if (REACT_APP_UNDER_DEVELOPMENT) {
-      return (<h1>Em desenvolvimento</h1>);
+    if (REACT_APP_UNDER_DEVELOPMENT === 'true') {
+      return <h1>Em desenvolvimento</h1>;
     }
   }
 
