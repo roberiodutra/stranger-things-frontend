@@ -46,6 +46,8 @@ class StrangerThings extends React.Component {
 
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
+
+    this.development = this.development.bind(this);
   }
 
   handleInput(event) {
