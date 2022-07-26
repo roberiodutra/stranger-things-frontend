@@ -3,11 +3,11 @@ import CharactersService from '../services/charactersAPI';
 import Table from './Table';
 
 const {
+  REACT_APP_UNDER_DEVELOPMENT,
   REACT_APP_HAWKINS_URL,
   REACT_APP_HAWKINS_TIMEOUT,
   REACT_APP_UPSIDEDOWN_URL,
   REACT_APP_UPSIDEDOWN_TIMEOUT,
-  UNDER_DEVELOPMENT,
 } = process.env;
 
 const getRealityClass = (hereIsTheUpsideDownWorld) => (
@@ -114,10 +114,9 @@ class StrangerThings extends React.Component {
   }
 
   development() {
-    if (UNDER_DEVELOPMENT) {
-      return <h1>Em desenvolvimento</h1>;
+    if (REACT_APP_UNDER_DEVELOPMENT) {
+      return (<h1>Em desenvolvimento</h1>);
     }
-    return false;
   }
 
   render() {
